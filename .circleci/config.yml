@@ -11,13 +11,15 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.4-browsers
-      - image: mysql:5.7
+    db:
+        image: mysql:5.7
         environment:
           MYSQL_HOST: 127.0.0.1
           MYSQL_DATABASE: laravel
           MYSQL_PASSWORD: 123456
           MYSQL_ROOT_PASSWORD: 123456
-          MYSQL_PORT: 3304
+          ports:
+            3306:3306
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
