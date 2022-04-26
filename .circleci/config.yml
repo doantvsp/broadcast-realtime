@@ -15,7 +15,6 @@ jobs:
         environment:
           MYSQL_HOST: 127.0.0.1
           MYSQL_DATABASE: laravel
-          MYSQL_USER: root
           MYSQL_PASSWORD: 123456
           MYSQL_ROOT_PASSWORD: 123456
 
@@ -55,7 +54,7 @@ jobs:
           keys:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
-      - run: yarn install
+      #- run: yarn install
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
