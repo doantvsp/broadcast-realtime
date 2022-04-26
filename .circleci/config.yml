@@ -17,6 +17,7 @@ jobs:
           MYSQL_DATABASE: laravel
           MYSQL_PASSWORD: 123456
           MYSQL_ROOT_PASSWORD: 123456
+          MYSQL_PORT: 3304
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
